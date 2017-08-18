@@ -9,7 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
-import com.team.showpwal.showpwal.Adapters.HomeEventListRecyclerViewAdapter;
+import com.team.showpwal.showpwal.Adapters.FollowingEventListRecyclerViewAdapter;
 import com.team.showpwal.showpwal.Models.Event;
 import com.team.showpwal.showpwal.R;
 import java.util.ArrayList;
@@ -19,20 +19,20 @@ import java.util.List;
  * Created by macbookpro on 8/18/17.
  */
 
-public class HomeEventListFragment extends Fragment {
+public class FollowingEventListFragment extends Fragment {
 
     @Override
     public View onCreateView(final LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(
-                R.layout.home_fragment, container, false);
+                R.layout.following_fragment, container, false);
         final RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
 
-        List<Object> feedList = loadEvents();
+        List<Object> eventList = loadEvents();
 
-        HomeEventListRecyclerViewAdapter homeEventListRecyclerViewAdapter = new HomeEventListRecyclerViewAdapter(getContext(),feedList);
-        homeEventListRecyclerViewAdapter.setOnItemClickListener(new HomeEventListRecyclerViewAdapter.OnItemClickListener() {
+        FollowingEventListRecyclerViewAdapter followingEventListRecyclerViewAdapter = new FollowingEventListRecyclerViewAdapter(getContext(),eventList);
+        followingEventListRecyclerViewAdapter.setOnItemClickListener(new FollowingEventListRecyclerViewAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
                 Toast.makeText(getContext(),"Clicked event",Toast.LENGTH_LONG);
@@ -41,11 +41,10 @@ public class HomeEventListFragment extends Fragment {
 
         GridLayoutManager manager = new GridLayoutManager(getContext(), 1);
         recyclerView.setLayoutManager(manager);
-        recyclerView.setAdapter(homeEventListRecyclerViewAdapter);
+        recyclerView.setAdapter(followingEventListRecyclerViewAdapter);
 
         return rootView;
     }
-
 
     @Override
     public void onAttach(Context context) {
@@ -70,5 +69,4 @@ public class HomeEventListFragment extends Fragment {
 
         return eventList;
     }
-
 }
