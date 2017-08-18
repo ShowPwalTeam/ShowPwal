@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import com.team.showpwal.showpwal.Models.Event;
 import com.team.showpwal.showpwal.R;
@@ -94,19 +95,35 @@ public class FollowingEventListRecyclerViewAdapter extends RecyclerView.Adapter<
     }
 
     public class EventFollowingViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
-        private TextView nameTextView;
+        private TextView eventNameTextView;
+        private TextView dayRange;
+        private TextView monthYear;
+        private TextView dayLeft;
+        private TextView locationName;
+        private ImageView eventPicture;
 
         public EventFollowingViewHolder(View itemView) {
             super(itemView);
 
-            nameTextView = (TextView) itemView.findViewById(R.id.sampleTextView);
+            eventNameTextView = (TextView) itemView.findViewById(R.id.eventName);
+            dayRange = (TextView) itemView.findViewById(R.id.dayRange);
+            monthYear = (TextView) itemView.findViewById(R.id.monthYear);
+            dayLeft = (TextView) itemView.findViewById(R.id.daysLeft);
+            locationName = (TextView) itemView.findViewById(R.id.location);
+            eventPicture = (ImageView) itemView.findViewById(R.id.eventPicture);
+
             //topicNameTextView = (TextView) itemView.findViewById(R.id.feedList_topic_name);
             itemView.setOnClickListener(this);
         }
 
         public void showFeedInfo(Event event){
 
-            nameTextView.setText(event.name+" "+"Hello");
+            eventNameTextView.setText(event.eventName);
+            dayRange.setText(event.dayRange);
+            monthYear.setText(event.monthYear);
+            dayLeft.setText(event.dayLeft+" days left");
+            locationName.setText(event.locationName);
+            eventPicture.setImageResource(R.drawable.event_pic);
 
         }
 

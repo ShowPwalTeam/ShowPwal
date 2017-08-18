@@ -62,8 +62,11 @@ public class HomeEventListFragment extends Fragment {
 
         for(int i=1;i<10;i++){
             Event event = new Event();
-            event.id = i;
-            event.name = "Event "+i;
+            event.eventName = "Event "+i;
+            event.dayRange = "25th to 28th";
+            event.dayLeft = 3;
+            event.monthYear = "March 2017";
+            event.locationName = "People's park";
 
             eventList.add(event);
         }
