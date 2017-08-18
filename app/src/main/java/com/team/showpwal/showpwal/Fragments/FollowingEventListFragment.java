@@ -63,6 +63,8 @@ public class FollowingEventListFragment extends Fragment {
             Event event = new Event();
             event.id = i;
             event.name = "Event "+i;
+
+            eventList.add(event);
         }
 
         return eventList;

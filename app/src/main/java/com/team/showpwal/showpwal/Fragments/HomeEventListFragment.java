@@ -64,6 +64,8 @@ public class HomeEventListFragment extends Fragment {
             Event event = new Event();
             event.id = i;
             event.name = "Event "+i;
+
+            eventList.add(event);
         }
 
         return eventList;
