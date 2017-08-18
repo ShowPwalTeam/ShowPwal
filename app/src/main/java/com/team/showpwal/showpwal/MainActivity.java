@@ -8,6 +8,10 @@ import android.support.v4.view.ViewPager;
 import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Toast;
+
+import com.team.showpwal.showpwal.Fragments.FollowingEventListFragment;
+import com.team.showpwal.showpwal.Fragments.HomeEventListFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onPageScrollStateChanged(int state) {
 
+                Toast.makeText(MainActivity.this,"Clicked",Toast.LENGTH_SHORT).show();
+
             }
         });
 
@@ -55,9 +61,9 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public Fragment getItem(int position) {
             if(position == 0) {
-                return new TopicListFragment();
+                return new HomeEventListFragment();
             } else if(position == 1) {
-                return new FeedListFragment();
+                return new FollowingEventListFragment();
             } else {
                 return null;
             }

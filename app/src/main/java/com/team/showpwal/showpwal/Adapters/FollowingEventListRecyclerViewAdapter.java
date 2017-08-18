@@ -6,20 +6,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import com.team.showpwal.showpwal.R;
 import com.team.showpwal.showpwal.Models.Event;
+import com.team.showpwal.showpwal.R;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-
 /**
- * Created by macbookpro on 7/21/17.
+ * Created by macbookpro on 8/18/17.
  */
 
-public class HomeEventListRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>  {
+public class FollowingEventListRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
 
-    private static final int VIEW_TYPE_HOME = 1;
+    private static final int VIEW_TYPE_FOLLOWING = 2;
 
     public interface OnItemClickListener {
         void onItemClick(View view, int position);
@@ -28,11 +27,9 @@ public class HomeEventListRecyclerViewAdapter extends RecyclerView.Adapter<Recyc
 
     private final LayoutInflater layoutInflater;
     private List<Object> eventList = Collections.emptyList();
-    private HomeEventListRecyclerViewAdapter.OnItemClickListener onItemClickListener;
+    private FollowingEventListRecyclerViewAdapter.OnItemClickListener onItemClickListener;
 
-    private long selectedFeedId = -1;
-
-    public HomeEventListRecyclerViewAdapter(Context context, List<Object> eventList) {
+    public FollowingEventListRecyclerViewAdapter(Context context, List<Object> eventList) {
         this.context = context;
         layoutInflater = LayoutInflater.from(context);
         this.eventList = new ArrayList<>();
@@ -49,7 +46,7 @@ public class HomeEventListRecyclerViewAdapter extends RecyclerView.Adapter<Recyc
     public int getItemViewType(int position) {
         Object content = eventList.get(position);
         if(content instanceof Event) {
-            return VIEW_TYPE_HOME;
+            return VIEW_TYPE_FOLLOWING;
         }
         return super.getItemViewType(position);
     }
@@ -64,18 +61,16 @@ public class HomeEventListRecyclerViewAdapter extends RecyclerView.Adapter<Recyc
         return super.getItemId(position);
     }
 
-    public void setOnItemClickListener(HomeEventListRecyclerViewAdapter.OnItemClickListener listener) {
+    public void setOnItemClickListener(FollowingEventListRecyclerViewAdapter.OnItemClickListener listener) {
         this.onItemClickListener = listener;
     }
-
-
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-        if(viewType == VIEW_TYPE_HOME) {
+        if(viewType == VIEW_TYPE_FOLLOWING) {
             View view = layoutInflater.inflate(R.layout.item_event, parent, false);
-            return new HomeEventListRecyclerViewAdapter.EventHomeViewHolder(view);
+            return new FollowingEventListRecyclerViewAdapter.EventFollowingViewHolder(view);
         }
         return null;
     }
@@ -85,10 +80,10 @@ public class HomeEventListRecyclerViewAdapter extends RecyclerView.Adapter<Recyc
 
         Object item = eventList.get(position);
 
-        if(item instanceof Event && holder instanceof EventHomeViewHolder) {
+        if(item instanceof Event && holder instanceof FollowingEventListRecyclerViewAdapter.EventFollowingViewHolder) {
             Event event = (Event) item;
-            EventHomeViewHolder eventHomeViewHolder = (EventHomeViewHolder) holder;
-            eventHomeViewHolder.showFeedInfo(event);
+            FollowingEventListRecyclerViewAdapter.EventFollowingViewHolder eventFollowingViewHolder = (FollowingEventListRecyclerViewAdapter.EventFollowingViewHolder) holder;
+            eventFollowingViewHolder.showFeedInfo(event);
         }
 
     }
@@ -98,19 +93,20 @@ public class HomeEventListRecyclerViewAdapter extends RecyclerView.Adapter<Recyc
         return eventList.size();
     }
 
-    public class EventHomeViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    public class EventFollowingViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         private TextView nameTextView;
 
-        public EventHomeViewHolder(View itemView) {
+        public EventFollowingViewHolder(View itemView) {
             super(itemView);
 
             nameTextView = (TextView) itemView.findViewById(R.id.sampleTextView);
+            //topicNameTextView = (TextView) itemView.findViewById(R.id.feedList_topic_name);
             itemView.setOnClickListener(this);
         }
 
         public void showFeedInfo(Event event){
 
-            nameTextView.setText(event.name+" "+ "Hello");
+            nameTextView.setText(event.name+" "+"Hello");
 
         }
 
