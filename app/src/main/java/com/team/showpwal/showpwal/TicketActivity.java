@@ -27,6 +27,7 @@ public class TicketActivity extends AppCompatActivity {
             @Override
             public void onItemClick(View view, int position) {
 
+
             }
         });
 
