@@ -41,8 +41,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onPageScrollStateChanged(int state) {
 
-                Toast.makeText(MainActivity.this,"Clicked",Toast.LENGTH_SHORT).show();
-
             }
         });
 

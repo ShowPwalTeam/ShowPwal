@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#d54d63</color>
+    <color name="colorPrimary">#fa4c68</color>
+    <color name="color_red_lighter">#c84c68</color>
+
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="app_color_white">#ffffff</color>
+    <color name="app_color_grey">#9E9E9E</color>
+    <color name="app_color_grey_light">#F0F0F0</color>
+    <color name="app_color_blue_selection">#B1E3FE</color>
+    <color name="app_color_blue_selection_border">#56C1F5</color>
+
+    <color name="app_color_green">#98CD27</color>
+    <color name="app_color_green_focused">#f6749d21</color>
+    <color name="app_color_green_pressed">#63DD21</color>
+
+    <color name="app_color_blue">#ff218bc6</color>
+    <color name="app_color_facebook_blue">#FF0000FF</color>
+    <color name="app_color_blue_focused">#ff218bc6</color>
+    <color name="app_color_blue_pressed">#ff2ba8ea</color>
+
+    <color name="app_color_danger_text">#ffac4e41</color>
+    <color name="app_color_success_text">#ff62851d</color>
+
+    <color name="app_color_bar_background">#ffd6d6d6</color>
+    <color name="app_color_bar">#ff7399c3</color>
+    <color name="app_color_bar_warning">#fff58777</color>
+    <color name="app_color_bar_cap">#ffca7340</color>
+    <color name="app_color_outline_success">#8BC34A</color>
+    <color name="app_color_order_button">#ff3f9335</color>
+    <color name="app_color_text_warning">#FF8F00</color>
+
+    <color name="color_orange_light">#ff7b00</color>
+    <color name="color_orange_dark">#bc5b00</color>
 </resources>

@@ -40,7 +40,9 @@
                         android:layout_height="match_parent"
                         android:src="@drawable/event_pic"
                         android:scaleType="centerCrop"
-                        android:layout_weight="4"/>
+                        android:layout_weight="4"
+                        android:padding="1dp"
+                        />
 
                 </LinearLayout>
 

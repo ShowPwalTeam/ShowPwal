@@ -3,6 +3,8 @@ package com.team.showpwal.showpwal;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,6 +38,14 @@ public class EventDetailActivity extends AppCompatActivity {
 
         TextView phNoTextView = (TextView) findViewById(R.id.phNo);
         phNoTextView.setText(phNo);
+
+        Button followBtn = (Button) findViewById(R.id.followBtn);
+        followBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
 
     }
 }
