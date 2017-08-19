@@ -1,7 +1,7 @@
 package com.team.showpwal.showpwal;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
+import android.graphics.Paint;
 import android.net.Uri;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
@@ -52,6 +52,9 @@ public class EventDetailActivity extends AppCompatActivity {
 
         TextView phNoTextView = (TextView) findViewById(R.id.phNo);
         phNoTextView.setText(event.phNo);
+
+        phNoTextView.setPaintFlags(phNoTextView.getPaintFlags() |   Paint.UNDERLINE_TEXT_FLAG);
+        phNoTextView.setText(phNo);
         phNoTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
