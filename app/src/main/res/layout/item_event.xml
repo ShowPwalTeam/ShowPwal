@@ -43,6 +43,9 @@
                         android:scaleType="centerCrop"
                         android:src="@drawable/event_pic" />
 
+                        android:layout_weight="4"
+                        android:padding="1dp"
+                        />
 
                 </LinearLayout>
 
@@ -145,7 +148,6 @@
                     android:padding="1dp"/>
 
             </LinearLayout>
-
 
         </LinearLayout>
 
