@@ -126,7 +126,7 @@
                     android:layout_height="match_parent"
                     android:textSize="12sp"
                     android:gravity="center"
-                    android:text="2 days Left"
+                    android:text="(2 days Left)"
                     android:padding="1dp"/>
 
             </LinearLayout>
