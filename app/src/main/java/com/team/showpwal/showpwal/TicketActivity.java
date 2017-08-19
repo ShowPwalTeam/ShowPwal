@@ -50,6 +50,11 @@ public class TicketActivity extends AppCompatActivity {
         ticket1.price = "10000";
         ticketList.add(ticket1);
 
+        Ticket ticket2 = new Ticket();
+        ticket2.type = "VVIP";
+        ticket2.price = "100000";
+        ticketList.add(ticket2);
+
         return ticketList;
     }
 
