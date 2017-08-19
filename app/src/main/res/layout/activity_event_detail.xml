@@ -12,7 +12,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:weightSum="2">
+        android:weightSum="2"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="58dp">
 
         <ImageView
             android:layout_width="match_parent"
@@ -78,10 +81,10 @@
                     android:id="@+id/phNo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="09455388264"
+                    android:layout_weight="1"
                     android:gravity="center_vertical"
-                    android:textSize="12dp"
-                    android:layout_weight="1"/>
+                    android:text="09455388264"
+                    android:textSize="12dp" />
             </LinearLayout>
 
             <LinearLayout
