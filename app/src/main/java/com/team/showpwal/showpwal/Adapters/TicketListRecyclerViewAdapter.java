@@ -104,8 +104,8 @@ public class TicketListRecyclerViewAdapter extends RecyclerView.Adapter<Recycler
         public TicketViewHolder(View itemView) {
             super(itemView);
 
-            sampleTextView = (TextView) itemView.findViewById(R.id.sampleTextView);
-            sampleTextView2 = (TextView) itemView.findViewById(R.id.sampleTextView2);
+            sampleTextView = (TextView) itemView.findViewById(R.id.ticketType);
+            sampleTextView2 = (TextView) itemView.findViewById(R.id.ticketPrice);
 
             itemView.setOnClickListener(this);
         }
