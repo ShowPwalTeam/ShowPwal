@@ -39,9 +39,10 @@
                         android:id="@+id/eventPicture"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/event_pic"
+                        android:adjustViewBounds="false"
                         android:scaleType="centerCrop"
-                        android:layout_weight="4" />
+                        android:src="@drawable/event_pic" />
+
 
                 </LinearLayout>
 
@@ -144,7 +145,6 @@
                     android:padding="1dp"/>
 
             </LinearLayout>
-
 
 
         </LinearLayout>
