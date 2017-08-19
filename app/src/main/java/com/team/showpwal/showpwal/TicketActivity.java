@@ -1,5 +1,6 @@
 package com.team.showpwal.showpwal;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
@@ -22,11 +23,16 @@ public class TicketActivity extends AppCompatActivity {
 
         List<Object> ticketList = loadTickets();
 
-        TicketListRecyclerViewAdapter ticketListRecyclerViewAdapter = new TicketListRecyclerViewAdapter(TicketActivity.this,ticketList);
+        final TicketListRecyclerViewAdapter ticketListRecyclerViewAdapter = new TicketListRecyclerViewAdapter(TicketActivity.this,ticketList);
         ticketListRecyclerViewAdapter.setOnItemClickListener(new TicketListRecyclerViewAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
+                Ticket ticket = (Ticket) ticketListRecyclerViewAdapter.getContent(position);
 
+                Intent intent = new Intent(TicketActivity.this,BuyTicketActivity.class);
+                intent.putExtra("type",ticket.type);
+                intent.putExtra("price",ticket.price);
+                startActivity(intent);
 
             }
         });
@@ -42,18 +48,18 @@ public class TicketActivity extends AppCompatActivity {
         List<Object> ticketList = new ArrayList<Object>();
 
         Ticket ticket = new Ticket();
-        ticket.type = "VIP";
+        ticket.type = "VVIP";
         ticket.price = "300000";
         ticketList.add(ticket);
 
         Ticket ticket1 = new Ticket();
-        ticket1.type = "Regular";
-        ticket1.price = "10000";
+        ticket1.type = "VIP";
+        ticket1.price = "100000";
         ticketList.add(ticket1);
 
         Ticket ticket2 = new Ticket();
-        ticket2.type = "VVIP";
-        ticket2.price = "100000";
+        ticket2.type = "Regular";
+        ticket2.price = "3000";
         ticketList.add(ticket2);
 
         return ticketList;

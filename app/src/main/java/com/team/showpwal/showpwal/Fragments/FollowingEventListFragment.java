@@ -1,7 +1,6 @@
 package com.team.showpwal.showpwal.Fragments;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
@@ -9,9 +8,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
+
 import com.team.showpwal.showpwal.Adapters.FollowingEventListRecyclerViewAdapter;
-import com.team.showpwal.showpwal.AllEventList;
 import com.team.showpwal.showpwal.Models.Event;
 import com.team.showpwal.showpwal.R;
 import java.util.ArrayList;
@@ -59,16 +57,18 @@ public class FollowingEventListFragment extends Fragment {
     }
 
     public List<Object> loadEvents(){
-        List<Object> eventList = AllEventList.getALlEvents();
         List<Object> followingEventList = new ArrayList<Object>();
+        for(int i=1;i<5;i++){
+            Event event = new Event();
+            event.id = i;
+            event.eventName = "Event "+i;
+            event.dayLeft = 3;
+            event.duration = "7PM TO 11PM";
+            event.locationName = "People's park";
+            event.timeRange = "28th to 30th";
+            event.phNo = "09977370400";
 
-        for(int i=0;i<eventList.size();i++){
-            if(eventList.get(i) instanceof Event){
-                Event event = (Event) eventList.get(i);
-                if(event.type==1){
-                    followingEventList.add(event);
-                }
-            }
+            followingEventList.add(event);
         }
 
         return followingEventList;

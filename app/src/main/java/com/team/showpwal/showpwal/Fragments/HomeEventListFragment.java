@@ -9,9 +9,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
+
 import com.team.showpwal.showpwal.Adapters.HomeEventListRecyclerViewAdapter;
-import com.team.showpwal.showpwal.AllEventList;
 import com.team.showpwal.showpwal.EventDetailActivity;
 import com.team.showpwal.showpwal.Models.Event;
 import com.team.showpwal.showpwal.R;
@@ -75,16 +74,19 @@ public class HomeEventListFragment extends Fragment {
     }
 
     public static List<Object> loadEvents(){
-        List<Object> eventList = AllEventList.getALlEvents();
         List<Object> homeEventList = new ArrayList<Object>();
 
-        for(int i=0;i<eventList.size();i++){
-            if(eventList.get(i) instanceof Event){
-                Event event = (Event) eventList.get(i);
-                if(event.type==0){
-                    homeEventList.add(event);
-                }
-            }
+        for(int i=1;i<10;i++){
+            Event event = new Event();
+            event.id = i;
+            event.eventName = "Event "+i;
+            event.dayLeft = 3;
+            event.duration = "7PM TO 11PM";
+            event.locationName = "People's park";
+            event.timeRange = "28th to 30th";
+            event.phNo = "09977370400";
+
+            homeEventList.add(event);
         }
 
         return homeEventList;

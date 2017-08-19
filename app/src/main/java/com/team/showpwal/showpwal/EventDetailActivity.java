@@ -83,15 +83,6 @@ public class EventDetailActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(EventDetailActivity.this,"Added to the following events !",Toast.LENGTH_SHORT).show();
-                List<Object> eventList = AllEventList.getALlEvents();
-                for(int i=0;i<eventList.size();i++){
-                    Object object = eventList.get(i);
-                    Event event1 = (Event) object;
-
-                    if(event1.id== event.id){
-                        event1.type = 1;
-                    }
-                }
             }
         });
 
