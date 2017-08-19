@@ -1,6 +1,7 @@
 package com.team.showpwal.showpwal;
 
 import android.content.Intent;
+import android.graphics.Paint;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -38,6 +39,7 @@ public class EventDetailActivity extends AppCompatActivity {
         durationTextView.setText(duration);
 
         TextView phNoTextView = (TextView) findViewById(R.id.phNo);
+        phNoTextView.setPaintFlags(phNoTextView.getPaintFlags() |   Paint.UNDERLINE_TEXT_FLAG);
         phNoTextView.setText(phNo);
         phNoTextView.setOnClickListener(new View.OnClickListener() {
             @Override
