@@ -9,7 +9,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
+import com.team.showpwal.showpwal.Fragments.FollowingEventListFragment;
+import com.team.showpwal.showpwal.Models.Event;
+
 
 public class EventDetailActivity extends AppCompatActivity {
 
@@ -19,26 +21,35 @@ public class EventDetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_event_detail);
 
         Intent intent = getIntent();
+        int eventId = intent.getIntExtra("id",0);
         String eventName = intent.getStringExtra("eventName");
         String timeRange = intent.getStringExtra("timeRange");
         String locationName = intent.getStringExtra("locationName");
         String duration = intent.getStringExtra("duration");
         String phNo = intent.getStringExtra("phNo");
 
+        final Event event = new Event();
+        event.id = eventId;
+        event.eventName = eventName;
+        event.timeRange = timeRange;
+        event.locationName = locationName;
+        event.duration = duration;
+        event.phNo = phNo;
+
         TextView eventNameTextView = (TextView) findViewById(R.id.eventNameDetail);
-        eventNameTextView.setText(eventName);
+        eventNameTextView.setText(event.eventName);
 
         TextView timeRangeTextView = (TextView) findViewById(R.id.timeRangeDetail);
-        timeRangeTextView.setText(timeRange);
+        timeRangeTextView.setText(event.timeRange);
 
         TextView locationNameTextView = (TextView) findViewById(R.id.locationDetail);
-        locationNameTextView.setText(locationName);
+        locationNameTextView.setText(event.locationName);
 
         TextView durationTextView = (TextView) findViewById(R.id.duration);
-        durationTextView.setText(duration);
+        durationTextView.setText(event.duration);
 
         TextView phNoTextView = (TextView) findViewById(R.id.phNo);
-        phNoTextView.setText(phNo);
+        phNoTextView.setText(event.phNo);
         phNoTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,6 +61,19 @@ public class EventDetailActivity extends AppCompatActivity {
         followBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                Bundle bundle = new Bundle();
+                bundle.putInt("id",event.id);
+                bundle.putString("eventName",event.eventName);
+                bundle.putString("timeRange",event.timeRange);
+                bundle.putString("locationName",event.locationName);
+                bundle.putString("phNo",event.phNo);
+                bundle.putString("duration",event.duration);
+
+                FollowingEventListFragment followingEventListFragment = new FollowingEventListFragment();
+                followingEventListFragment.setArguments(bundle);
+
+                Toast.makeText(EventDetailActivity.this,"Added to the following events !",Toast.LENGTH_SHORT).show();
 
             }
         });

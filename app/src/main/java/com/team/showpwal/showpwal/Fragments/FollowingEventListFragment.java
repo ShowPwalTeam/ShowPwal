@@ -1,6 +1,7 @@
 package com.team.showpwal.showpwal.Fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
@@ -31,6 +32,7 @@ public class FollowingEventListFragment extends Fragment {
 
         List<Object> eventList = loadEvents();
 
+
         FollowingEventListRecyclerViewAdapter followingEventListRecyclerViewAdapter = new FollowingEventListRecyclerViewAdapter(getContext(),eventList);
         followingEventListRecyclerViewAdapter.setOnItemClickListener(new FollowingEventListRecyclerViewAdapter.OnItemClickListener() {
             @Override
@@ -56,19 +58,25 @@ public class FollowingEventListFragment extends Fragment {
         super.onDetach();
     }
 
-    public static List<Object> loadEvents(){
+    public List<Object> loadEvents(){
         List<Object> eventList = new ArrayList<Object>();
 
-        for(int i=1;i<10;i++){
-            Event event = new Event();
-            event.id = i;
-            event.eventName = "Influence Rock";
-            event.timeRange = "25th to 29th,March 2017";
-            event.dayLeft = 3;
-            event.locationName = "People's park";
+        //int eventId = getArguments().getInt("id",0);
+        /*String eventName = getArguments().getString("eventName");
+        String timeRange = getArguments().getString("timeRange");
+        String locationName = getArguments().getString("locationName");
+        String duration = getArguments().getString("duration");
+        String phNo = getArguments().getString("phNo");*/
 
-            eventList.add(event);
-        }
+        /*Event event = new Event();
+        event.id = eventId;
+        event.eventName = eventName;
+        event.timeRange = timeRange;
+        event.locationName = locationName;
+        event.duration = duration;
+        event.phNo = phNo;
+
+        eventList.add(event);*/
 
         return eventList;
     }
