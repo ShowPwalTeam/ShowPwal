@@ -20,8 +20,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".EventDetailActivity" />
+<<<<<<< HEAD
         <activity android:name=".TicketActivity" />
         <activity android:name=".BuyTicketActivity"></activity>
+=======
+        <activity
+            android:name=".TicketActivity"></activity>
+>>>>>>> 1978e2b4c4aea15f567e8ac047ea69e1e6e97b0d
     </application>
 
 </manifest>
