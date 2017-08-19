@@ -59,23 +59,53 @@
                         android:layout_weight="1"
                         android:weightSum="2">
 
-                        <TextView
-                            android:id="@+id/eventNameDetail"
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
                             android:layout_weight="1"
-                            android:textSize="14dp"
-                            android:gravity="center"
-                            android:text="Hackathon event" />
+                            android:weightSum="5">
 
-                        <TextView
-                            android:id="@+id/timeRangeDetail"
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@mipmap/event"
+                                android:layout_weight="4"/>
+
+                            <TextView
+                                android:id="@+id/eventNameDetail"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:textSize="14dp"
+                                android:gravity="center"
+                                android:text="Hackathon event" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="26th to 29th,September 2017"
-                            android:textSize="14dp"
-                            android:gravity="center"
-                            android:layout_weight="1"/>
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:weightSum="5"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="4"
+                                android:src="@mipmap/calendar"/>
+
+                            <TextView
+                                android:id="@+id/timeRangeDetail"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="26th to 29th,September 2017"
+                                android:textSize="14dp"
+                                android:gravity="center"
+                                android:layout_weight="1"/>
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
@@ -86,24 +116,55 @@
                         android:layout_weight="1"
                         android:weightSum="2">
 
-
-                        <TextView
-                            android:id="@+id/locationDetail"
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Kanaung hack"
-                            android:gravity="center"
-                            android:textSize="14dp"
-                            android:layout_weight="1"/>
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:weightSum="5"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="4"
+                                android:src="@mipmap/map"/>
+
+
+                            <TextView
+                                android:id="@+id/locationDetail"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Kanaung hack"
+                                android:gravity="center"
+                                android:textSize="14dp"
+                                android:layout_weight="1"/>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:weightSum="5"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="4"
+                                android:src="@mipmap/clock"/>
 
                         <TextView
                             android:id="@+id/duration"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:textSize="14dp"
                             android:text="9am to 6pm"
                             android:gravity="center"
                             android:layout_weight="1"/>
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
@@ -117,14 +178,29 @@
                     android:weightSum="2"
                     android:background="@color/cardview_light_background">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:text="Call :"
-                        android:textStyle="bold"
-                        android:gravity="center"
-                        android:textSize="20dp"/>
+                        android:weightSum="2"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:src="@mipmap/phone"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Call :"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:textSize="20dp"/>
+
+                    </LinearLayout>
 
                     <TextView
                         android:id="@+id/phNo"
@@ -159,7 +235,8 @@
                     <ScrollView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:fillViewport="true">
+                        android:fillViewport="true"
+                        android:background="@color/app_color_white">
 
                         <TextView
                             android:id="@+id/eventDescription"

@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#ffefefef">
+    android:background="#ffefefef"
+    android:weightSum="1">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -91,7 +92,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="2"
                 android:gravity="center"
-                android:hint="@gmail.com"
+                android:hint="xx@gmail.com"
                 android:inputType="textEmailAddress"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -230,15 +231,18 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="125dp"
+        android:layout_weight="1.16">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_weight="2"
-        android:layout_centerVertical="true"
-        android:layout_alignParentStart="true">
+        android:id="@+id/linearLayout5"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="61dp">
 
         <Button
             android:layout_width="match_parent"
