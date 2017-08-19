@@ -96,8 +96,7 @@ public class FollowingEventListRecyclerViewAdapter extends RecyclerView.Adapter<
 
     public class EventFollowingViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         private TextView eventNameTextView;
-        private TextView dayRange;
-        private TextView monthYear;
+        private TextView timeRange;
         private TextView dayLeft;
         private TextView locationName;
         private ImageView eventPicture;
@@ -106,8 +105,7 @@ public class FollowingEventListRecyclerViewAdapter extends RecyclerView.Adapter<
             super(itemView);
 
             eventNameTextView = (TextView) itemView.findViewById(R.id.eventName);
-            dayRange = (TextView) itemView.findViewById(R.id.dayRange);
-            monthYear = (TextView) itemView.findViewById(R.id.monthYear);
+            timeRange = (TextView) itemView.findViewById(R.id.timeRange);
             dayLeft = (TextView) itemView.findViewById(R.id.daysLeft);
             locationName = (TextView) itemView.findViewById(R.id.location);
             eventPicture = (ImageView) itemView.findViewById(R.id.eventPicture);
@@ -119,8 +117,7 @@ public class FollowingEventListRecyclerViewAdapter extends RecyclerView.Adapter<
         public void showFeedInfo(Event event){
 
             eventNameTextView.setText(event.eventName);
-            dayRange.setText(event.dayRange);
-            monthYear.setText(event.monthYear);
+            timeRange.setText(event.timeRange);
             dayLeft.setText(event.dayLeft+" days left");
             locationName.setText(event.locationName);
             eventPicture.setImageResource(R.drawable.event_pic);

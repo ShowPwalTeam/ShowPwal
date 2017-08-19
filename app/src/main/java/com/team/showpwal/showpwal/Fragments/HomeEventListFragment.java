@@ -1,6 +1,7 @@
 package com.team.showpwal.showpwal.Fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
@@ -10,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 import com.team.showpwal.showpwal.Adapters.HomeEventListRecyclerViewAdapter;
+import com.team.showpwal.showpwal.EventDetailActivity;
 import com.team.showpwal.showpwal.Models.Event;
 import com.team.showpwal.showpwal.R;
 import java.util.ArrayList;
@@ -31,11 +33,25 @@ public class HomeEventListFragment extends Fragment {
 
         List<Object> feedList = loadEvents();
 
-        HomeEventListRecyclerViewAdapter homeEventListRecyclerViewAdapter = new HomeEventListRecyclerViewAdapter(getContext(),feedList);
+        final HomeEventListRecyclerViewAdapter homeEventListRecyclerViewAdapter = new HomeEventListRecyclerViewAdapter(getContext(),feedList);
         homeEventListRecyclerViewAdapter.setOnItemClickListener(new HomeEventListRecyclerViewAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-                Toast.makeText(getContext(),"Clicked event",Toast.LENGTH_LONG);
+                Object object = homeEventListRecyclerViewAdapter.getContent(position);
+                if(object instanceof Event){
+                    Event event = (Event) object;
+                    Intent intent = new Intent(getContext(),EventDetailActivity.class);
+
+                    intent.putExtra("id",event.id);
+                    intent.putExtra("eventName",event.eventName);
+                    intent.putExtra("timeRange",event.timeRange);
+                    intent.putExtra("locationName",event.locationName);
+                    intent.putExtra("phNo",event.phNo);
+                    intent.putExtra("duration",event.duration);
+
+                    startActivity(intent);
+
+                }
             }
         });
 
@@ -63,10 +79,11 @@ public class HomeEventListFragment extends Fragment {
         for(int i=1;i<10;i++){
             Event event = new Event();
             event.eventName = "Event "+i;
-            event.dayRange = "25th to 28th";
+            event.timeRange = "25th to 29th,March 2017";
             event.dayLeft = 3;
-            event.monthYear = "March 2017";
             event.locationName = "People's park";
+            event.phNo = "09401548877";
+            event.duration = "7 PM To 10 PM";
 
             eventList.add(event);
         }

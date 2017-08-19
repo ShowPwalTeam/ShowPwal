@@ -35,7 +35,7 @@ public class FollowingEventListFragment extends Fragment {
         followingEventListRecyclerViewAdapter.setOnItemClickListener(new FollowingEventListRecyclerViewAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-                Toast.makeText(getContext(),"Clicked event",Toast.LENGTH_LONG);
+
             }
         });
 
@@ -62,10 +62,9 @@ public class FollowingEventListFragment extends Fragment {
         for(int i=1;i<10;i++){
             Event event = new Event();
             event.id = i;
-            event.eventName = "Event "+i;
-            event.dayRange = "25th to 28th";
+            event.eventName = "Influence Rock";
+            event.timeRange = "25th to 29th,March 2017";
             event.dayLeft = 3;
-            event.monthYear = "March 2017";
             event.locationName = "People's park";
 
             eventList.add(event);

@@ -7,8 +7,9 @@ package com.team.showpwal.showpwal.Models;
 public class Event {
     public int id;
     public String eventName;
-    public String dayRange;
-    public String monthYear;
+    public String timeRange;
     public int dayLeft;
     public String locationName;
+    public String phNo;
+    public String duration;
 }
