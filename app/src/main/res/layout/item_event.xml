@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:background="#d3d3d3">
+    android:orientation="horizontal">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="140dp"
+        android:layout_height="135dp"
         android:orientation="vertical"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="7dp"
         android:layout_marginLeft="6dp"
         android:layout_marginRight="6dp"
         android:weightSum="4"
-        android:background="@drawable/shape_button_white">
+        android:background="@drawable/layout_bg">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -33,7 +33,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:padding="5dp">
+
 
                     <ImageView
                         android:id="@+id/eventPicture"
@@ -41,11 +43,9 @@
                         android:layout_height="match_parent"
                         android:adjustViewBounds="false"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/event_pic" />
+                        android:src="@drawable/event_pic"
+                        android:padding="1dp"/>
 
-                        android:layout_weight="4"
-                        android:padding="1dp"
-                        />
 
                 </LinearLayout>
 
