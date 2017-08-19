@@ -23,6 +23,7 @@
             android:layout_weight="1"
             android:scaleType="centerCrop"
             android:src="@drawable/event_pic"
+            android:padding="3dp"
             android:layout_marginBottom="5dp"/>
 
         <LinearLayout
