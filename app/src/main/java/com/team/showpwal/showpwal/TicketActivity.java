@@ -59,7 +59,7 @@ public class TicketActivity extends AppCompatActivity {
 
         Ticket ticket2 = new Ticket();
         ticket2.type = "Regular";
-        ticket2.price = "3000";
+        ticket2.price = "30000";
         ticketList.add(ticket2);
 
         return ticketList;

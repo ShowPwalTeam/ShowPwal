@@ -71,7 +71,7 @@
         android:orientation="horizontal"
         android:weightSum="5"
         android:layout_below="@+id/linearLayout4"
-        android:layout_alignParentStart="true">>
+        android:layout_alignParentStart="true">
 
         <TextView
             android:id="@+id/email"
@@ -84,19 +84,12 @@
             android:textStyle="bold" />
 
         <EditText
-                android:id="@+id/emailEditText"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="2"
-                android:gravity="center"
-<<<<<<< HEAD
-                android:hint="example@gmail.com"
-=======
-                android:hint="xx@gmail.com"
->>>>>>> 9dc2b66c8bb90375d15da3da986c5d6b9200a71b
-                android:inputType="textEmailAddress"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+            android:id="@+id/emailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:hint="example@gmail.com"/>
 
     </LinearLayout>
 
@@ -244,6 +237,7 @@
         android:layout_marginTop="61dp">
 
         <Button
+            android:id="@+id/purchaseBtn"
             android:background="@drawable/shape_button_red_light"
             android:layout_width="match_parent"
             android:layout_height="40dp"
@@ -254,12 +248,13 @@
             android:layout_margin="5dp"/>
 
         <Button
+            android:id="@+id/cancelBtn"
             android:background="@drawable/shape_button_red_light"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="cancal"
+            android:text="cancel"
             android:textColor="@color/app_color_white"
             android:layout_margin="5dp"/>
     </LinearLayout>

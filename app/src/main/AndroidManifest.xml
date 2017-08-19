@@ -19,9 +19,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".EventDetailActivity" />
-        <activity android:name=".TicketActivity" />
-        <activity android:name=".BuyTicketActivity"></activity>
+        <activity
+            android:name=".EventDetailActivity"
+            android:label="Event Details">
+        </activity>
+
+        <activity android:name=".TicketActivity"
+            android:label="Ticket Prices">
+        </activity>
+
+        <activity
+            android:name=".BuyTicketActivity"
+            android:label="Buy Your Ticket">
+        </activity>
     </application>
 
 </manifest>
