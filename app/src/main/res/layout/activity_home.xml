@@ -39,14 +39,14 @@
                     android:paddingRight="10dp">
 
                     <EditText
-                        android:id="@+id/email_edit_text"
+                        android:id="@+id/username_edit_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:ems="18"
                         android:gravity="center_horizontal"
                         android:hint="Username"
-                        android:inputType="textEmailAddress"
+                        android:inputType="text"
                         android:textAlignment="center">
 
                         <!--<requestFocus />-->
@@ -62,7 +62,9 @@
                         android:gravity="center_horizontal"
                         android:hint="Password"
                         android:inputType="textPassword"
-                        android:textAlignment="center"></EditText>
+                        android:textAlignment="center">
+
+                    </EditText>
 
                     <Button
                         android:id="@+id/logInBtn"
@@ -75,7 +77,6 @@
                         android:textColor="@color/app_color_white"
                         android:textSize="17sp"
                         android:textStyle="bold" />
-
                     <Button
                         android:id="@+id/signUpBtn"
                         android:layout_width="match_parent"
@@ -92,7 +93,6 @@
 
 
         </RelativeLayout>
-
 
     </ScrollView>
 </LinearLayout>
