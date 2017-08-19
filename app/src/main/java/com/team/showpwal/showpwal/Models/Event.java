@@ -12,4 +12,5 @@ public class Event {
     public String locationName;
     public String phNo;
     public String duration;
+    public int type;
 }

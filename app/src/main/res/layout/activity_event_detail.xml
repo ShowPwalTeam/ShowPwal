@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#d3d3d3">
+    android:background="#d3d3d3"
+    android:padding="3dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,7 +15,7 @@
         android:weightSum="2"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="58dp">
+        android:layout_marginBottom="5dp">
 
         <ImageView
             android:layout_width="match_parent"
@@ -22,6 +23,7 @@
             android:layout_weight="1"
             android:scaleType="centerCrop"
             android:src="@drawable/event_pic"
+            android:padding="3dp"
             android:layout_marginBottom="5dp"/>
 
         <LinearLayout
@@ -36,54 +38,106 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:layout_weight="1"
-                android:weightSum="5"
+                android:weightSum="3"
                 android:layout_marginBottom="5dp"
                 android:background="@color/cardview_light_background">
 
-                <TextView
-                    android:id="@+id/eventNameDetail"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
                     android:layout_weight="1"
-                    android:gravity="center_vertical"
-                    android:textStyle="bold"
-                    android:text="Hackathon event" />
+                    android:weightSum="2"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/cardview_light_background">
 
-                <TextView
-                    android:id="@+id/timeRangeDetail"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="26th to 29th,September 2017"
-                    android:textSize="12dp"
-                    android:gravity="center_vertical"
-                    android:layout_weight="1"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:weightSum="2">
 
-                <TextView
-                    android:id="@+id/duration"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="12dp"
-                    android:text="9am to 6pm"
-                    android:gravity="center_vertical"
-                    android:layout_weight="1"/>
+                        <TextView
+                            android:id="@+id/eventNameDetail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="14dp"
+                            android:gravity="center"
+                            android:text="Hackathon event" />
 
-                <TextView
-                    android:id="@+id/locationDetail"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Kanaung hack"
-                    android:gravity="center_vertical"
-                    android:textSize="12dp"
-                    android:layout_weight="1"/>
+                        <TextView
+                            android:id="@+id/timeRangeDetail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="26th to 29th,September 2017"
+                            android:textSize="14dp"
+                            android:gravity="center"
+                            android:layout_weight="1"/>
 
-                <TextView
-                    android:id="@+id/phNo"
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:weightSum="2">
+
+
+                        <TextView
+                            android:id="@+id/locationDetail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Kanaung hack"
+                            android:gravity="center"
+                            android:textSize="14dp"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:id="@+id/duration"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="14dp"
+                            android:text="9am to 6pm"
+                            android:gravity="center"
+                            android:layout_weight="1"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center_vertical"
-                    android:text="09455388264"
-                    android:textSize="12dp" />
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="2"
+                    android:weightSum="2"
+                    android:background="@color/cardview_light_background">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Call :"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="20dp"/>
+
+                    <TextView
+                        android:id="@+id/phNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="09777379355"
+                        android:gravity="center"
+                        android:textSize="20dp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+
             </LinearLayout>
 
             <LinearLayout
@@ -115,19 +169,50 @@
 
                 </LinearLayout>
 
-                <RelativeLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="2">
+                    android:layout_weight="2"
+                    android:weightSum="3"
+                    android:orientation="horizontal"
+                    android:background="@color/cardview_light_background"
+                    android:padding="5dp">
+
+
+
+                    <Button
+                        android:id="@+id/callBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Call"
+                        android:background="@drawable/shape_button_red_light"
+                        android:textColor="@color/app_color_white"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginLeft="2dp"/>
+
+                    <Button
+                        android:id="@+id/ticketBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Ticket Price"
+                        android:background="@drawable/shape_button_red_light"
+                        android:textColor="@color/app_color_white"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginLeft="2dp"/>
 
                     <Button
                         android:id="@+id/followBtn"
+                        android:layout_weight="1"
                         android:layout_width="match_parent"
+                        android:background="@drawable/shape_button_red_light"
                         android:layout_height="match_parent"
-                        android:layout_alignParentBottom="true"
-                        android:layout_alignParentEnd="true"
-                        android:text="follow" />
-                </RelativeLayout>
+                        android:textColor="@color/app_color_white"
+                        android:text="follow"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginLeft="2dp"/>
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
 

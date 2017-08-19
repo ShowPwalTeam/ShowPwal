@@ -31,8 +31,6 @@ public class HomeEventListRecyclerViewAdapter extends RecyclerView.Adapter<Recyc
     private List<Object> eventList = Collections.emptyList();
     private HomeEventListRecyclerViewAdapter.OnItemClickListener onItemClickListener;
 
-    private long selectedFeedId = -1;
-
     public HomeEventListRecyclerViewAdapter(Context context, List<Object> eventList) {
         this.context = context;
         layoutInflater = LayoutInflater.from(context);

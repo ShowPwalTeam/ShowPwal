@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 import com.team.showpwal.showpwal.Adapters.FollowingEventListRecyclerViewAdapter;
+import com.team.showpwal.showpwal.AllEventList;
 import com.team.showpwal.showpwal.Models.Event;
 import com.team.showpwal.showpwal.R;
 import java.util.ArrayList;
@@ -31,7 +32,6 @@ public class FollowingEventListFragment extends Fragment {
         recyclerView.setHasFixedSize(true);
 
         List<Object> eventList = loadEvents();
-
 
         FollowingEventListRecyclerViewAdapter followingEventListRecyclerViewAdapter = new FollowingEventListRecyclerViewAdapter(getContext(),eventList);
         followingEventListRecyclerViewAdapter.setOnItemClickListener(new FollowingEventListRecyclerViewAdapter.OnItemClickListener() {
@@ -59,25 +59,18 @@ public class FollowingEventListFragment extends Fragment {
     }
 
     public List<Object> loadEvents(){
-        List<Object> eventList = new ArrayList<Object>();
+        List<Object> eventList = AllEventList.getALlEvents();
+        List<Object> followingEventList = new ArrayList<Object>();
 
-        //int eventId = getArguments().getInt("id",0);
-        /*String eventName = getArguments().getString("eventName");
-        String timeRange = getArguments().getString("timeRange");
-        String locationName = getArguments().getString("locationName");
-        String duration = getArguments().getString("duration");
-        String phNo = getArguments().getString("phNo");*/
+        for(int i=0;i<eventList.size();i++){
+            if(eventList.get(i) instanceof Event){
+                Event event = (Event) eventList.get(i);
+                if(event.type==1){
+                    followingEventList.add(event);
+                }
+            }
+        }
 
-        /*Event event = new Event();
-        event.id = eventId;
-        event.eventName = eventName;
-        event.timeRange = timeRange;
-        event.locationName = locationName;
-        event.duration = duration;
-        event.phNo = phNo;
-
-        eventList.add(event);*/
-
-        return eventList;
+        return followingEventList;
     }
 }
