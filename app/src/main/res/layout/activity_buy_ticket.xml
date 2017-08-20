@@ -248,6 +248,7 @@
             android:layout_marginBottom="5dp">
 
             <Button
+                android:id="@+id/purchaseBtn"
                 android:background="@drawable/shape_button_red_light"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
@@ -258,12 +259,13 @@
                 android:layout_margin="5dp"/>
 
             <Button
+                android:id="@+id/cancelBtn"
                 android:background="@drawable/shape_button_red_light"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="cancal"
+                android:text="cancel"
                 android:textColor="@color/app_color_white"
                 android:layout_margin="5dp"/>
         </LinearLayout>

@@ -1,13 +1,12 @@
 package com.team.showpwal.showpwal.Fragments;
 
-import android.app.Notification;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -19,9 +18,8 @@ import com.team.showpwal.showpwal.MainActivity;
 import com.team.showpwal.showpwal.Models.Event;
 import com.team.showpwal.showpwal.R;
 import java.util.ArrayList;
-import android.support.annotation.RequiresApi;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v4.app.NotificationCompat;
+import android.widget.Toast;
+
 import java.util.List;
 
 import static android.content.Context.NOTIFICATION_SERVICE;
@@ -63,6 +61,8 @@ public class FollowingEventListFragment extends Fragment {
 
                 }
 
+
+
             }
         });
 
@@ -83,7 +83,7 @@ public class FollowingEventListFragment extends Fragment {
         super.onDetach();
     }
 
-    public List<Object> loadEvents(){
+    public List<Object> loadEvents() {
         List<Object> followingEventList = new ArrayList<Object>();
 
         Event event = new Event();
@@ -99,11 +99,4 @@ public class FollowingEventListFragment extends Fragment {
 
         return followingEventList;
     }
-
-    /*public void letStartNoti(){
-        NotificationManager notificationManager = (NotificationManager)
-    }*/
-
-
-
 }

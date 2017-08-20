@@ -120,7 +120,7 @@ public class FollowingEventListRecyclerViewAdapter extends RecyclerView.Adapter<
             timeRange.setText(event.timeRange);
             dayLeft.setText(event.dayLeft+" days left");
             locationName.setText(event.locationName);
-            eventPicture.setImageResource(R.drawable.event_pic);
+            eventPicture.setImageResource(R.drawable.influence_rock);
 
         }
 

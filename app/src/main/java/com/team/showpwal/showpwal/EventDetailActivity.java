@@ -89,6 +89,8 @@ public class EventDetailActivity extends AppCompatActivity {
             }
         });
 
+
+
         Button ticketBtn = (Button) findViewById(R.id.ticketBtn);
         ticketBtn.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -1,6 +1,9 @@
 package com.team.showpwal.showpwal;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Build;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -37,17 +40,31 @@ public class BuyTicketActivity extends AppCompatActivity {
         purchaseBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(BuyTicketActivity.this,"You have purchased your ticket",Toast.LENGTH_SHORT).show();
+                showDialog();
             }
         });
+    }
 
+    public void showDialog(){
+        AlertDialog.Builder builder;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            builder = new AlertDialog.Builder(BuyTicketActivity.this, android.R.style.Theme_Material_Dialog_Alert);
+        } else {
+            builder = new AlertDialog.Builder(BuyTicketActivity.this);
+        }
+        builder.setTitle("Purchase")
+                .setMessage("Are you sure you want to purchase this ticket?")
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(BuyTicketActivity.this,"Purchased!",Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
 
-
-        /*int cost = Integer.parseInt(ticketPriceBuy.getText().toString();
-        int num = Integer.parseInt(numberOfTickets.getText().toString());
-*/
-        //TextView totalCost = (TextView) findViewById(R.id.totalCosts);
-        //totalCost.setText(cost*num+"");
-
+                    }
+                })
+                .setIcon(R.drawable.purchase_alert)
+                .show();
     }
 }
