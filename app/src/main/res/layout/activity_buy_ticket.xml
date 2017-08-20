@@ -4,266 +4,271 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#ffefefef"
-    android:weightSum="1">
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:orientation="horizontal"
-        android:weightSum="5">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="3"
-            android:gravity="center"
-            android:text="Ticket Type"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/ticketTypeBuy"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:gravity="center"
-            android:text="VIP"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-    </LinearLayout>
+    android:orientation="horizontal"
+    android:background="@color/app_color_white">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:orientation="horizontal"
-        android:weightSum="5"
-        android:layout_below="@+id/linearLayout"
-        android:layout_alignParentStart="true"
-        android:id="@+id/linearLayout2">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="9">
 
-
-        <TextView
+        <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="3"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            android:text="Ticket Cost" />
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="5">
 
-        <TextView
-            android:id="@+id/ticketPriceBuy"
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="Ticket Type"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/ticketTypeBuy"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="VIP"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            android:text="20000" />
-    </LinearLayout>
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:weightSum="5"
+            android:layout_below="@+id/linearLayout"
+            android:id="@+id/linearLayout2">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:orientation="horizontal"
-        android:weightSum="5"
-        android:layout_below="@+id/linearLayout4"
-        android:layout_alignParentStart="true">>
 
-        <TextView
-            android:id="@+id/email"
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:text="Ticket Cost" />
+
+            <TextView
+                android:id="@+id/ticketPriceBuy"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:text="20000" />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="3"
-            android:gravity="center"
-            android:text="Email address"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="5"
+            android:layout_alignParentStart="true">>
 
-        <EditText
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="Email address"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
                 android:id="@+id/emailEditText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="2"
                 android:gravity="center"
-<<<<<<< HEAD
+
                 android:hint="example@gmail.com"
-=======
-                android:hint="xx@gmail.com"
->>>>>>> 9dc2b66c8bb90375d15da3da986c5d6b9200a71b
                 android:inputType="textEmailAddress"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
-    </LinearLayout>
+        </LinearLayout>
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:orientation="horizontal"
-        android:weightSum="5"
-        android:layout_below="@+id/linearLayout2"
-        android:layout_alignParentStart="true"
-        android:id="@+id/linearLayout4">
-
-
-        <TextView
-            android:id="@+id/userPhoneNoTextView"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="3"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            android:text="Phone no" />
-
-        <EditText
-            android:id="@+id/userPhoneNoEditTextView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            android:hint="09xxxxxxxxx"
-            android:inputType="phone"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:orientation="horizontal"
-        android:weightSum="5"
-        android:layout_below="@+id/linearLayout2"
-        android:layout_alignParentStart="true">
-
-
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="3"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            android:text="Address" />
-
-        <EditText
-            android:id="@+id/editText8"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            android:hint="No.1,XXX road,XXX township"
-            android:inputType="text"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:orientation="horizontal"
-        android:weightSum="5"
-        android:layout_below="@+id/linearLayout2"
-        android:layout_alignParentStart="true">
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="3"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            android:text="Number of tickets" />
-
-        <EditText
-            android:id="@+id/number_of_tickets"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            android:hint="0"
-            android:inputType="number"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal"></LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:orientation="horizontal"
-        android:weightSum="5"
-        android:layout_below="@+id/linearLayout2"
-        android:layout_alignParentStart="true">
-
-        <TextView
-            android:id="@+id/textView10"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="3"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            android:text="Total Costs" />
-
-        <TextView
-            android:id="@+id/totalCosts"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            android:text="0"/>
-    </LinearLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="125dp"
-        android:layout_weight="1.16">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_weight="2"
-        android:id="@+id/linearLayout5"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="61dp">
-
-        <Button
-            android:background="@drawable/shape_button_red_light"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:orientation="horizontal"
             android:layout_weight="1"
-            android:gravity="center"
-            android:text="Purchase"
-            android:textColor="@color/app_color_white"
-            android:layout_margin="5dp"/>
+            android:weightSum="5"
+            android:layout_below="@+id/linearLayout2"
+            android:id="@+id/linearLayout4">
 
-        <Button
-            android:background="@drawable/shape_button_red_light"
+
+            <TextView
+                android:id="@+id/userPhoneNoTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:text="Phone no" />
+
+            <EditText
+                android:id="@+id/userPhoneNoEditTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:hint="09xxxxxxxxx"
+                android:inputType="phone"/>
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
             android:layout_weight="1"
-            android:gravity="center"
-            android:text="cancal"
-            android:textColor="@color/app_color_white"
-            android:layout_margin="5dp"/>
-    </LinearLayout>
+            android:weightSum="5"
+            android:layout_alignParentStart="true">
 
-    </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:text="Address" />
+
+            <EditText
+                android:id="@+id/editText8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:hint="No.1,XXX road,XXX township"
+                android:inputType="text"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:weightSum="5"
+            android:layout_alignParentStart="true">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:text="Number of tickets" />
+
+            <EditText
+                android:id="@+id/number_of_tickets"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:hint="0"
+                android:inputType="number"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:weightSum="5"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:text="Total Costs" />
+
+            <TextView
+                android:id="@+id/totalCosts"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:text="0"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:id="@+id/linearLayout5"
+            android:weightSum="2"
+            android:layout_marginBottom="5dp">
+
+            <Button
+                android:background="@drawable/shape_button_red_light"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Purchase"
+                android:textColor="@color/app_color_white"
+                android:layout_margin="5dp"/>
+
+            <Button
+                android:background="@drawable/shape_button_red_light"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="cancal"
+                android:textColor="@color/app_color_white"
+                android:layout_margin="5dp"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
 
 </LinearLayout>
