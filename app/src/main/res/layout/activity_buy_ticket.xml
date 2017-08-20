@@ -163,7 +163,7 @@
                 android:gravity="center"
                 android:textStyle="bold"
                 android:textSize="18sp"
-                android:hint="No.1,XXX road,XXX township"
+                android:hint="No.1,XXX road,XXX township,Yangon"
                 android:inputType="text"/>
         </LinearLayout>
 
