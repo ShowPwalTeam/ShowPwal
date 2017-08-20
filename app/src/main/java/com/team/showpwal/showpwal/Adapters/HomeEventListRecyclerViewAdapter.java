@@ -107,6 +107,7 @@ public class HomeEventListRecyclerViewAdapter extends RecyclerView.Adapter<Recyc
         public EventHomeViewHolder(View itemView) {
             super(itemView);
 
+            eventPicture = (ImageView) itemView.findViewById(R.id.eventPicture);
             eventNameTextView = (TextView) itemView.findViewById(R.id.eventName);
             timeRange = (TextView) itemView.findViewById(R.id.timeRange);
             dayLeft = (TextView) itemView.findViewById(R.id.daysLeft);
@@ -122,7 +123,19 @@ public class HomeEventListRecyclerViewAdapter extends RecyclerView.Adapter<Recyc
             timeRange.setText(event.timeRange);
             dayLeft.setText(event.dayLeft+" days left");
             locationName.setText(event.locationName);
-            eventPicture.setImageResource(R.drawable.event_pic);
+            if(event.id ==1){
+                eventPicture.setImageResource(R.drawable.yan_pone_ngwe);
+            }else if(event.id==2){
+                eventPicture.setImageResource(R.drawable.zay_yaung_pwel);
+            }else if(event.id==3){
+                eventPicture.setImageResource(R.drawable.influence_rock);
+            }else if(event.id==4){
+                eventPicture.setImageResource(R.drawable.promotion_show);
+            }else if(event.id==5){
+                eventPicture.setImageResource(R.drawable.ic_show);
+            }else if(event.id==6){
+                eventPicture.setImageResource(R.drawable.hnin_si_a_nyeint);
+            }
         }
 
         @Override

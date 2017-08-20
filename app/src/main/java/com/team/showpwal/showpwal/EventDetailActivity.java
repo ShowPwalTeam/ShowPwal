@@ -2,17 +2,16 @@ package com.team.showpwal.showpwal;
 
 import android.content.Intent;
 import android.graphics.Paint;
+import android.media.Image;
 import android.net.Uri;
-import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.team.showpwal.showpwal.Models.Event;
-
-import java.util.List;
 
 public class EventDetailActivity extends AppCompatActivity {
 
@@ -29,6 +28,7 @@ public class EventDetailActivity extends AppCompatActivity {
         String locationName = intent.getStringExtra("locationName");
         String duration = intent.getStringExtra("duration");
         String phNo = intent.getStringExtra("phNo");
+        String description = intent.getStringExtra("description");
 
         final Event event = new Event();
         event.id = eventId;
@@ -37,6 +37,22 @@ public class EventDetailActivity extends AppCompatActivity {
         event.locationName = locationName;
         event.duration = duration;
         event.phNo = phNo;
+        event.description = description;
+
+        ImageView eventDetailView = (ImageView) findViewById(R.id.eventDetailPic);
+        if(event.id ==1){
+            eventDetailView.setImageResource(R.drawable.yan_pone_ngwe);
+        }else if(event.id==2){
+            eventDetailView.setImageResource(R.drawable.zay_yaung_pwel);
+        }else if(event.id==3){
+            eventDetailView.setImageResource(R.drawable.influence_rock);
+        }else if(event.id==4){
+            eventDetailView.setImageResource(R.drawable.promotion_show);
+        }else if(event.id==5){
+            eventDetailView.setImageResource(R.drawable.ic_show);
+        }else if(event.id==6){
+            eventDetailView.setImageResource(R.drawable.hnin_si_a_nyeint);
+        }
 
         TextView eventNameTextView = (TextView) findViewById(R.id.eventNameDetail);
         eventNameTextView.setText(event.eventName);
@@ -52,6 +68,9 @@ public class EventDetailActivity extends AppCompatActivity {
 
         TextView phNoTextView = (TextView) findViewById(R.id.phNo);
         phNoTextView.setText(event.phNo);
+
+        TextView eventDescription = (TextView) findViewById(R.id.eventDescription);
+        eventDescription.setText(event.description);
 
         phNoTextView.setPaintFlags(phNoTextView.getPaintFlags() |   Paint.UNDERLINE_TEXT_FLAG);
         phNoTextView.setText(phNo);
@@ -83,6 +102,14 @@ public class EventDetailActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(EventDetailActivity.this,"Added to the following events !",Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        ImageView phoneIconView = (ImageView) findViewById(R.id.phoneIcon);
+        phoneIconView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                call();
             }
         });
 
