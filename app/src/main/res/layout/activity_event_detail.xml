@@ -70,7 +70,8 @@
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:src="@mipmap/event"
+                                android:src="@drawable/event"
+                                android:padding="9dp"
                                 android:layout_weight="4"/>
 
                             <TextView
@@ -95,7 +96,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="4"
-                                android:src="@mipmap/calendar"/>
+                                android:src="@drawable/calender"/>
 
                             <TextView
                                 android:id="@+id/timeRangeDetail"
@@ -127,8 +128,9 @@
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
+                                android:padding="9dp"
                                 android:layout_weight="4"
-                                android:src="@mipmap/map"/>
+                                android:src="@drawable/gps"/>
 
 
                             <TextView
@@ -154,7 +156,9 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="4"
-                                android:src="@mipmap/clock"/>
+                                android:src="@drawable/clock"
+                                android:padding="8dp"
+                                android:scaleType="centerInside"/>
 
                         <TextView
                             android:id="@+id/duration"
@@ -191,13 +195,16 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:src="@mipmap/phone"/>
+                            android:padding="8dp"
+                            android:src="@drawable/call"/>
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:text="Call :"
+                            android:text="Call    :"
+                            android:textAlignment="textStart"
+                            android:paddingLeft="6dp"
                             android:textStyle="bold"
                             android:gravity="center"
                             android:textSize="20dp"/>
@@ -210,6 +217,8 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:text="09777379355"
+                        android:paddingLeft="8dp"
+                        android:textAlignment="textStart"
                         android:gravity="center"
                         android:textSize="20dp"
                         android:textStyle="bold"/>
