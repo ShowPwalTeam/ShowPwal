@@ -17,15 +17,27 @@
         android:layout_alignParentStart="true"
         android:layout_marginBottom="5dp">
 
-        <ImageView
-            android:id="@+id/eventDetailPic"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="5dp"
             android:layout_weight="3"
-            android:scaleType="centerCrop"
-            android:src="@drawable/happy_birthday"
-            android:padding="3dp"
-            android:layout_marginBottom="5dp"/>
+            android:background="@drawable/layout_bg"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp">
+
+            <ImageView
+                android:id="@+id/eventDetailPic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/happy_birthday"
+                android:padding="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="3dp"/>
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -266,8 +278,10 @@
                     android:layout_weight="2"
                     android:weightSum="3"
                     android:orientation="horizontal"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
                     android:background="@color/cardview_light_background"
-                    android:padding="5dp">
+                    android:padding="4dp">
 
                     <Button
                         android:id="@+id/callBtn"
@@ -277,8 +291,7 @@
                         android:text="Call"
                         android:background="@drawable/shape_button_red_light"
                         android:textColor="@color/app_color_white"
-                        android:layout_marginRight="2dp"
-                        android:layout_marginLeft="2dp"/>
+                        android:layout_marginRight="2dp" />
 
                     <Button
                         android:id="@+id/ticketBtn"
@@ -299,7 +312,6 @@
                         android:layout_height="match_parent"
                         android:textColor="@color/app_color_white"
                         android:text="follow"
-                        android:layout_marginRight="2dp"
                         android:layout_marginLeft="2dp"/>
                 </LinearLayout>
             </LinearLayout>
