@@ -22,9 +22,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        NestedScrollView scrollView = (NestedScrollView) findViewById(R.id.nestedScrollView);
-        scrollView.setFillViewport(true);
-
         mPager = (ViewPager) findViewById(R.id.pager);
         ScreenSlidePagerAdapter mPagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
         mPager.setAdapter(mPagerAdapter);
