@@ -43,7 +43,7 @@
                         android:layout_height="match_parent"
                         android:adjustViewBounds="false"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/event_pic"
+                        android:src="@drawable/influence_rock"
                         android:padding="1dp"/>
 
 
@@ -98,11 +98,7 @@
 
                 </LinearLayout>
 
-
-
                 </LinearLayout>
-
-
 
             </LinearLayout>
 

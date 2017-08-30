@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onPageSelected(int position) {
-                // String pageTitle = mPagerAdapter.getPageTitle(position).toString();
             }
 
             @Override
@@ -46,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
         tabLayout.setupWithViewPager(mPager);
 
+        tabLayout.getTabAt(0).setIcon(R.drawable.home);
+        tabLayout.getTabAt(1).setIcon(R.drawable.follow);
     }
 
     private class ScreenSlidePagerAdapter extends FragmentStatePagerAdapter {

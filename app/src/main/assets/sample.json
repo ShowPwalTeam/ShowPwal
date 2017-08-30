@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "eventName": "Influence Rock",
+    "timeRange": "1st July 2017 October",
+    "dayLeft": 5,
+    "locationName": "Thuwanabumi Event Park",
+    "duration": "7PM TO 11PM",
+    "phNo": "09401548877",
+    "description": "Rock show"
+  },
+  {
+    "id": 2,
+    "eventName": "Yan Pone Ngwe",
+    "timeRange": "1st July 2017 October",
+    "dayLeft": 5,
+    "locationName": "Thuwanabumi Event Park",
+    "duration": "7PM TO 11PM",
+    "phNo": "09401548877",
+    "description": "Pa Ya Hi Ta Show"
+  },
+  {
+    "id": 3,
+    "eventName": "Hnin Si A Nyeint",
+    "timeRange": "1st July 2017 October",
+    "dayLeft": 5,
+    "locationName": "People's Park",
+    "duration": "7PM TO 11PM",
+    "phNo": "09401548877",
+    "description": "Comedy Show"
+  }
+]

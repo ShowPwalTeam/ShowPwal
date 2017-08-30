@@ -13,4 +13,5 @@ public class Event {
     public String phNo;
     public String duration;
     public String description;
+    public String eventType;
 }

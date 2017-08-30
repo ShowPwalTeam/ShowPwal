@@ -9,9 +9,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.team.showpwal.showpwal.Adapters.HomeEventListRecyclerViewAdapter;
 import com.team.showpwal.showpwal.EventDetailActivity;
+import com.team.showpwal.showpwal.GetterTasks.HomeEventGetterTask;
 import com.team.showpwal.showpwal.Models.Event;
 import com.team.showpwal.showpwal.R;
 import java.util.ArrayList;
@@ -23,6 +25,8 @@ import java.util.List;
 
 public class HomeEventListFragment extends Fragment {
 
+    private HomeEventListRecyclerViewAdapter homeEventListRecyclerViewAdapter;
+
     @Override
     public View onCreateView(final LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -31,9 +35,22 @@ public class HomeEventListFragment extends Fragment {
         final RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
 
-        List<Object> feedList = loadEvents();
+        List<Object> homeEventList = loadEvents();
 
-        final HomeEventListRecyclerViewAdapter homeEventListRecyclerViewAdapter = new HomeEventListRecyclerViewAdapter(getContext(),feedList);
+        /*HomeEventGetterTask homeEventGetterTask = new HomeEventGetterTask(){
+            @Override
+            protected void onPostExecute(List<Object> events){
+                super.onPostExecute(events);
+                if(events!=null){
+                    Toast.makeText(getContext(),"Not Null",Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(getContext(),"Null",Toast.LENGTH_SHORT).show();
+                }
+            }
+        };
+        homeEventGetterTask.execute();*/
+
+        homeEventListRecyclerViewAdapter = new HomeEventListRecyclerViewAdapter(getContext(),homeEventList);
         homeEventListRecyclerViewAdapter.setOnItemClickListener(new HomeEventListRecyclerViewAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
@@ -56,6 +73,9 @@ public class HomeEventListFragment extends Fragment {
                 }
             }
         });
+
+
+
 
         GridLayoutManager manager = new GridLayoutManager(getContext(), 1);
         recyclerView.setLayoutManager(manager);
