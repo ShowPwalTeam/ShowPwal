@@ -54,7 +54,6 @@ public class HomeEventListFragment extends Fragment {
         homeEventListRecyclerViewAdapter.setOnItemClickListener(new HomeEventListRecyclerViewAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-
                 Object object = homeEventListRecyclerViewAdapter.getContent(position);
                 if(object instanceof Event){
                     Event event = (Event) object;
@@ -73,9 +72,6 @@ public class HomeEventListFragment extends Fragment {
                 }
             }
         });
-
-
-
 
         GridLayoutManager manager = new GridLayoutManager(getContext(), 1);
         recyclerView.setLayoutManager(manager);
@@ -100,7 +96,7 @@ public class HomeEventListFragment extends Fragment {
 
         Event event = new Event();
         event.id = 1;
-        event.eventName = "Yan Pone Ngwe ";
+        event.eventName = "Yan Pone Ngwe";
         event.dayLeft = 7;
         event.duration = "7PM TO 12PM";
         event.locationName = "National Theatre";

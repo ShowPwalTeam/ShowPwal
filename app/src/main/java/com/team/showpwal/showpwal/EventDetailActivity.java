@@ -1,9 +1,12 @@
 package com.team.showpwal.showpwal;
 
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Paint;
-import android.media.Image;
 import android.net.Uri;
+import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -108,6 +111,7 @@ public class EventDetailActivity extends AppCompatActivity {
         followBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                NotifyUser();
                 Toast.makeText(EventDetailActivity.this,"Added to the following events !",Toast.LENGTH_SHORT).show();
             }
         });
@@ -121,7 +125,7 @@ public class EventDetailActivity extends AppCompatActivity {
         });
 
     }
-    public void call(){
+    private void call(){
         TextView phNoTextView = (TextView) findViewById(R.id.phNo);
         String number = "tel:"+phNoTextView.getText().toString();
         Intent callIntent = new Intent(Intent.ACTION_DIAL);
@@ -129,14 +133,27 @@ public class EventDetailActivity extends AppCompatActivity {
         startActivity(callIntent);
     }
 
+    private void NotifyUser()
+    {
+        NotificationCompat.Builder notiBuilder = new NotificationCompat.Builder(this)
+                .setSmallIcon(R.drawable.app_logo)
+                .setContentTitle("Reminder")
+                .setContentText("The Event you followed is near!");
+
+        Intent intent = new Intent(EventDetailActivity.this,MainActivity.class);
+        //intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+
+        PendingIntent pendingIntent = PendingIntent.getActivity(EventDetailActivity.this,0,intent,PendingIntent.FLAG_UPDATE_CURRENT);
+        notiBuilder.setContentIntent(pendingIntent);
+
+        NotificationManager notificationManager = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
+        notificationManager.notify(0,notiBuilder.build());
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
+        int id = item.getItemId();
 
         if (id == android.R.id.home) {
             onBackPressed();

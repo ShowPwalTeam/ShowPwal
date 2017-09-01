@@ -1,6 +1,7 @@
 package com.team.showpwal.showpwal.APIs;
 
 import com.team.showpwal.showpwal.Models.Event;
+import com.team.showpwal.showpwal.Models.EventList;
 
 import java.util.List;
 import retrofit2.Call;
@@ -11,6 +12,9 @@ import retrofit2.http.GET;
  */
 
 public interface ShowPwalClient{
-    @GET("59a1979f25000071018d66c6")
-    Call<List<Object>> info_get();
+    /*@GET("info")
+    Call<List<Event>> info_get();*/
+
+    @GET("info")
+    Call<List<EventList>> info_get();
 }
